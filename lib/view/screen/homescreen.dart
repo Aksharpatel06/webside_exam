@@ -131,7 +131,7 @@ class _homescreenState extends State<homescreen> {
                                 child: Image.asset('asset/image/shoesproduct/Rectangle9.png',fit:BoxFit.cover),
                               ),
                             ],
-                          )
+                          ),
                         ],
                       ),
                     ),

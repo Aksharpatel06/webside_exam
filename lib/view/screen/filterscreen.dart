@@ -1,3 +1,4 @@
+import 'package:core_flutter_exam/view/screen/productscreen.dart';
 import 'package:flutter/material.dart';
 
 import '../../util/product.dart';
@@ -317,12 +318,32 @@ class _secondscreenState extends State<secondscreen> {
           ),
           SingleChildScrollView(
             child:Column(
-              children: List.generate(
-                    products.length,
-                    (index) => (products[index]['price'] >= x &&
-                                products[index]['price'] <= y)
-                            ? addBox(index, context)
+              children: [
+                Row(
+                  children: List.generate(
+                        products.length,
+                        (index) => (products[index]['price'] >= x &&
+                                    products[index]['price'] <= y)
+                                ? addBox(index, context)
+                                : Container())
+                ),
+                Row(
+                    children: List.generate(
+                        product1.length,
+                            (index) => (product1[index]['price'] >= x &&
+                            product1[index]['price'] <= y)
+                            ? addBox1(index, context)
                             : Container())
+                ),
+                Row(
+                    children: List.generate(
+                        product2.length,
+                            (index) => (product2[index]['price'] >= x &&
+                            product2[index]['price'] <= y)
+                            ? addBox2(index, context)
+                            : Container())
+                ),
+              ],
             ),
           ),
         ]),
@@ -356,7 +377,8 @@ Widget brand(String? name) {
 Widget addBox(int index, BuildContext context) {
   return GestureDetector(
     onTap: () {
-      // Navigator.pushNamed(context, '/product');
+      product_index = index;
+      Navigator.pushNamed(context, '/product',arguments: products[index]);
     },
     child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -371,6 +393,94 @@ Widget addBox(int index, BuildContext context) {
           ),
         ),
          SizedBox(
+          width: 50,
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Container(
+            height: 80,
+            width: 200,
+            decoration: BoxDecoration(color: Colors.white),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  products[index]['name'],
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                Text('${products[index]['price']}RWF')
+              ],
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
+}
+Widget addBox1(int index, BuildContext context) {
+  return GestureDetector(
+    onTap: () {
+      product_index = index;
+      Navigator.pushNamed(context, '/product',arguments: product1[index]);
+    },
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          height: 200,
+          width: 200,
+          margin: EdgeInsets.only(left: 10),
+          decoration: BoxDecoration(color: Colors.grey.withOpacity(0.2)),
+          child: ClipRRect(
+            child: Image.asset(products[index]['img']),
+          ),
+        ),
+        SizedBox(
+          width: 50,
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Container(
+            height: 80,
+            width: 200,
+            decoration: BoxDecoration(color: Colors.white),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  products[index]['name'],
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                Text('${products[index]['price']}RWF')
+              ],
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
+}
+Widget addBox2(int index, BuildContext context) {
+  return GestureDetector(
+    onTap: () {
+      product_index = index;
+      Navigator.pushNamed(context, '/product',arguments: product2[index]);
+    },
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          height: 200,
+          width: 200,
+          margin: EdgeInsets.only(left: 10),
+          decoration: BoxDecoration(color: Colors.grey.withOpacity(0.2)),
+          child: ClipRRect(
+            child: Image.asset(products[index]['img']),
+          ),
+        ),
+        SizedBox(
           width: 50,
         ),
         Padding(

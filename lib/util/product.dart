@@ -26,57 +26,69 @@ List products = [
     'name' : 'Jordan Delta 2',
     'img' : 'asset/image/filter/Rectangle 19.png',
     'brand' : 'Jordan',
-    'price' : 35000
+    'price' : 35000,
+    'qty':0,
   },
   {
     'name' : 'Nike Air Jordan XT',
     'img' : 'asset/image/filter/Rectangle 24.png',
     'brand' : 'Nike',
-    'price' : 35000
+    'price' : 35000,
+    'qty':0,
   },
   {
     'name' : 'RS-X-INTL Game',
     'img' : 'asset/image/filter/Rectangle 25.png',
     'brand' : 'RS',
+    'qty':0,
     'price' : 35000
   },
+];
+List product1=[
   {
     'name' : 'Suede Classic',
     'img' : 'asset/image/filter/Rectangle 26.png',
     'brand' : 'Suede',
+    'qty':0,
     'price' : 35000
   },
   {
     'name' : 'NMD 1 Refined',
     'img' : 'asset/image/filter/Rectangle 29.png',
     'brand' : 'NMD',
+    'qty':0,
     'price' : 35000
   },
   {
     'name' : 'Superstar Classic',
     'img' : 'asset/image/filter/Rectangle 36.png',
     'brand' : 'Superstar',
+    'qty':0,
     'price' : 35000
   },
+];
+List product2=[
   {
     'name' : 'Adiddas Beluga',
     'img' : 'asset/image/filter/Rectangle 38.png',
     'brand' : 'Adiddas',
+    'qty':0,
     'price' : 35000
   },
   {
     'name' : 'Nike Air Jordan XT',
     'img' : 'asset/image/filter/Rectangle 48.png',
     'brand' : 'Nike',
+    'qty':0,
     'price' : 35000
   },
   {
     'name' : 'Nike Wobler',
     'img' : 'asset/image/filter/Rectangle 50.png',
     'brand' : 'Nike',
+    'qty':0,
     'price' : 35000
   },
-
 ];
 
 List brands = [
@@ -87,3 +99,5 @@ List brands = [
   'Suede',
   'Gucci',
 ];
+
+List card =[];

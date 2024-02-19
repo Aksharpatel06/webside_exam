@@ -1,5 +1,7 @@
+import 'package:core_flutter_exam/view/screen/cardscreen.dart';
 import 'package:core_flutter_exam/view/screen/homescreen.dart';
 import 'package:core_flutter_exam/view/screen/filterscreen.dart';
+import 'package:core_flutter_exam/view/screen/productscreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,6 +20,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (Context) => homescreen(),
         '/second': (Context) => secondscreen(),
+        '/product':(context)=>productscreen(),
+        '/card':(context)=>cardscreen(),
       }
     );
   }
