@@ -186,7 +186,7 @@ class _secondscreenState extends State<secondscreen> {
                           decoration: BoxDecoration(
                             border: Border.all(color: Colors.grey),
                           ),
-                          child: Center(child: Text('32')),
+                          child: Center(child: Text('32') ),
                         ),
                       ],
                     )

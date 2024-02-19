@@ -16,7 +16,7 @@ List l1 =[
   },
   {
     'img':'asset/image/product/Rectangle26.png',
-    'name':'Nike Wobler',
+    'name':'Nike Wobler ',
     'prize':35000,
   },
 ];
