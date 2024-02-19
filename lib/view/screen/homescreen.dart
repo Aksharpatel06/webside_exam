@@ -25,7 +25,14 @@ class _homescreenState extends State<homescreen> {
             title: Row(
               children: [
                 SizedBox(width: 500,),
-                Text('New arrivals',style: TextStyle(fontSize: 15),),
+                InkWell(
+                  onTap: () {
+                    setState(() {
+                      Navigator.pushNamed(context,'/second');
+                    });
+                  },
+                    child: Text('New arrivals',style: TextStyle(fontSize: 15),)
+                ),
                 SizedBox(width: 20,),
                 Text('Men',style: TextStyle(fontSize: 15),),
                 SizedBox(width: 20,),

@@ -1,5 +1,5 @@
 import 'package:core_flutter_exam/view/screen/homescreen.dart';
-import 'package:core_flutter_exam/view/screen/secondscreen.dart';
+import 'package:core_flutter_exam/view/screen/filterscreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/second',
+      initialRoute: '/',
       routes: {
         '/': (Context) => homescreen(),
         '/second': (Context) => secondscreen(),
